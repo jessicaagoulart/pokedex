@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/cardTag.css";
+import "../../assets/css/cardTag.css";
 
 export default function CardTag({ pokemon }) {
 	return (

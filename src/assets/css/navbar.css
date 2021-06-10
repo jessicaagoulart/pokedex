@@ -1,0 +1,31 @@
+.navbar {
+	position: relative;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	overflow: hidden;
+	background: rgb(3, 10, 36);
+	background: linear-gradient(
+		11deg,
+		rgba(3, 10, 36, 1) 46%,
+		rgba(221, 45, 26, 1) 100%
+	);
+}
+
+.navbar img {
+	position: relative;
+	width: 300px;
+	display: flex;
+	margin-top: -50px;
+	margin-right: -50px;
+	opacity: 10%;
+}
+
+.navbar h1 {
+	position: absolute;
+	font-size: 4rem;
+	top: 50px;
+	left: 50px;
+	color: rgb(255, 204, 65);
+	font-weight: bold;
+}

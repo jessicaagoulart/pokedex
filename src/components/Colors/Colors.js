@@ -1,6 +1,7 @@
 export default function color({ pokemon }) {
 	let color = "";
 	const type = pokemon.types[0].type.name;
+
 	if (type === "bug") {
 		color = "#a6d44a";
 	} else if (type === "water") {
@@ -26,7 +27,7 @@ export default function color({ pokemon }) {
 	} else if (type === "grass") {
 		color = "#80c979";
 	} else if (type === "electric") {
-		color = "#ffe77a";
+		color = "#fde26a";
 	} else if (type === "psychic") {
 		color = "#ff8b8f";
 	} else if (type === "ice") {

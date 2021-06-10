@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAllPokemon, getPokemon } from "./api";
 import Card from "./components/Card/index";
+import Navbar from "./components/Navbar/index";
 
 function App() {
 	const [pokemonData, setPokemonData] = useState([]);
@@ -65,6 +66,8 @@ function App() {
 				</h1>
 			) : (
 				<>
+					<Navbar />
+
 					<div className="btn">
 						<button onClick={prev}>Anterior</button>
 						<button onClick={next}>Próximo</button>

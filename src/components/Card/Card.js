@@ -1,12 +1,21 @@
 import React from "react";
-import "../../assets/card.css";
+import "../../assets/css/card.css";
 import color from "../Colors/index";
 import CardTag from "./CardTag";
-import pokeball from "./pokeball.png";
+import CardDetails from "./CardDetails";
+import pokeball from "../../assets/img/pokeball.png";
 
 function Card({ pokemon }) {
+	const openCard = (event, pokemon) => {
+		return <CardDetails pokemon={pokemon}>{console.log("teste")}</CardDetails>;
+	};
+
 	return (
-		<div style={{ backgroundColor: color({ pokemon }) }} className="card">
+		<div
+			style={{ backgroundColor: color({ pokemon }) }}
+			className="card"
+			onClick={(event) => openCard(event, pokemon)}
+		>
 			<div className="card-info">
 				<div className="card-nome">
 					<h2>#{pokemon.id}</h2>
@@ -19,7 +28,7 @@ function Card({ pokemon }) {
 				<img className="card-img__pokebola" src={pokeball} />
 				<img
 					className="card-img__pokemon"
-					src={pokemon.sprites.front_default}
+					src={pokemon.sprites.other["official-artwork"].front_default}
 					alt={pokemon.name}
 				/>
 			</div>
