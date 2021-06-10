@@ -1,26 +1,24 @@
 import React from "react";
 import "../../assets/css/card.css";
-import color from "../Colors/index";
-import CardTag from "./CardTag";
+import { useState, useEffect } from "react";
+import { getPokemon } from "../../api";
 
 function CardDetails({ pokemon }) {
-	return (
-		<div style={{ backgroundColor: color({ pokemon }) }} className="card">
-			<div className="card-info">
-				<div className="card-nome">
-					<h2>#{pokemon.id}</h2>
-					<h2>{pokemon.name.toUpperCase()}</h2>
-				</div>
-				<CardTag pokemon={pokemon} />
-			</div>
+	const [cardDetails, setCardDetails] = useState({});
+	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
-			<div className="card-img">
-				<img
-					className="card-img__pokemon"
-					src={pokemon.sprites.front_default}
-					alt={pokemon.name}
-				/>
-			</div>
+	useEffect(() => {
+		async function fetchData() {
+			let response = await getPokemon(url);
+			setCardDetails(response);
+		}
+		fetchData();
+	}, []);
+
+	return (
+		<div>
+			{console.log({ cardDetails })}
+			<h1>oi</h1>
 		</div>
 	);
 }

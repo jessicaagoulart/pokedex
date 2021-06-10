@@ -2,20 +2,11 @@ import React from "react";
 import "../../assets/css/card.css";
 import color from "../Colors/index";
 import CardTag from "./CardTag";
-import CardDetails from "./CardDetails";
 import pokeball from "../../assets/img/pokeball.png";
 
 function Card({ pokemon }) {
-	const openCard = (event, pokemon) => {
-		return <CardDetails pokemon={pokemon}>{console.log("teste")}</CardDetails>;
-	};
-
 	return (
-		<div
-			style={{ backgroundColor: color({ pokemon }) }}
-			className="card"
-			onClick={(event) => openCard(event, pokemon)}
-		>
+		<div style={{ backgroundColor: color({ pokemon }) }} className="card">
 			<div className="card-info">
 				<div className="card-nome">
 					<h2>#{pokemon.id}</h2>
