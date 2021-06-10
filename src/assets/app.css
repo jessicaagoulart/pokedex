@@ -1,0 +1,36 @@
+.principal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.btn button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	background-color: coral;
+	transition: ease-in 0.3s;
+	cursor: pointer;
+}
+
+.btn button:hover {
+	transform: scale(1.05);
+}
+
+.btn button:first-child {
+	margin-right: 10px;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.page {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
