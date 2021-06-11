@@ -1,19 +1,22 @@
 .card-details {
 	width: 100vw;
-	height: 300px;
+	height: 100%;
 	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
 }
 
 .card-details-conteudo {
 	background: white;
-	width: 100%;
+	width: 90%;
 	height: 300px;
-	margin-top: -40px;
-	border-radius: 40px;
+	border-radius: 40px 40px 0px 0px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 30px 0px 30px 0px;
+	padding: 60px 20px 60px 20px;
+	align-self: center;
+	margin-top: -80px;
 }
 
 .card-details h1 {
@@ -21,15 +24,20 @@
 	font-size: 5rem;
 	font-weight: 900;
 	text-align: center;
+	margin-left: 20%;
 }
 
 .img-details {
-	width: 50%;
+	width: 45%;
+	margin-left: 5%;
+	z-index: 999;
+	position: relative;
 }
 
 .img-details img {
 	width: 70%;
 	margin-top: -100px;
+	z-index: 999;
 }
 
 .info-details {
@@ -79,6 +87,7 @@
 	transition: all 0.5s;
 	font-size: 1rem;
 	margin-left: 20px;
+	margin-bottom: 5px;
 }
 
 .details-voltar:hover {
@@ -129,3 +138,102 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+/* Medium devices */
+@media screen and (max-width: 991px) {
+	.card-details-conteudo {
+		margin-top: -50px;
+	}
+}
+
+/* Small devices */
+@media screen and (max-width: 767.98px) {
+	.img-details img {
+		margin: 0;
+		width: 110%;
+	}
+	.card-details h1 {
+		margin: 0;
+	}
+
+	.img-details {
+		width: 40%;
+	}
+
+	.info-details {
+		width: 60%;
+	}
+
+	.details-header {
+		max-width: 100vw;
+	}
+
+	.card-details-conteudo {
+		justify-content: center;
+		height: 350px;
+		margin-top: 0;
+	}
+	.info-details .card-tags .card-type {
+		padding: 10px 20px;
+		margin-right: 10px;
+		font-size: 0.8rem;
+		border-radius: 30px;
+	}
+
+	.info-details-up {
+		justify-content: center;
+	}
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+	.card-details-conteudo {
+		flex-direction: column;
+	}
+	.data-details {
+		width: 90%;
+		margin-bottom: 20px;
+	}
+
+	.card-details-conteudo {
+		height: 500px;
+		padding-bottom: 40px;
+		margin-top: -20px;
+	}
+	.card-details h1 {
+		font-size: 3rem;
+	}
+
+	.details-voltar {
+		margin-bottom: 10px;
+		padding: 5px 10px;
+	}
+	.id-details h2 {
+		font-size: 2rem;
+	}
+
+	.id-details {
+		margin-right: 10px;
+	}
+
+	.info-details .card-tags .card-type {
+		padding: 5px 15px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		font-size: 0.8rem;
+		border-radius: 30px;
+	}
+	.info-details .card-tags {
+		flex-wrap: wrap;
+	}
+
+	.info-details-up {
+		justify-content: center;
+	}
+
+	.img-details {
+		margin: 3%;
+		width: 37%;
+	}
+}
+/*-----------------------------------------------------------------------*/

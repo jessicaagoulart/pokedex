@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function CardDetails({ pokemon }) {
 	console.log(pokemon);
+
 	return (
 		<Router forceRefresh={true}>
 			<div>
@@ -27,6 +28,7 @@ function CardDetails({ pokemon }) {
 								src={pokemon.sprites.other["official-artwork"].front_default}
 								alt={pokemon.name}
 							></img>
+							<img></img>
 						</div>
 
 						<div className="info-details">
@@ -38,31 +40,33 @@ function CardDetails({ pokemon }) {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="card-details-conteudo">
-					<div className="data-details">
-						<h3>Pokedéx Data</h3>
-						<p>Peso: {pokemon.weight / 10} kg</p>
-						<p>Altura: {pokemon.height / 10} m</p>
-						<p>HP: {pokemon.stats[0].base_stat}</p>
-						<p>Ataque: {pokemon.stats[1].base_stat}</p>
-						<p>Defesa: {pokemon.stats[2].base_stat}</p>
-						<p>Ataque Especial: {pokemon.stats[3].base_stat}</p>
-						<p>Velocidade: {pokemon.stats[5].base_stat}</p>
-					</div>
 
-					<div className="data-details">
-						<h3>Habilidades</h3>
-						<div className="abilities">
-							<p>{pokemon.abilities[0].ability.name.toUpperCase()}</p>
-							<p>{pokemon.abilities[1].ability.name.toUpperCase()}</p>
+					<div className="card-details-conteudo">
+						<div className="data-details">
+							<h3>Pokedéx Data</h3>
+							<p>Peso: {pokemon.weight / 10} kg</p>
+							<p>Altura: {pokemon.height / 10} m</p>
+							<p>HP: {pokemon.stats[0].base_stat}</p>
+							<p>Ataque: {pokemon.stats[1].base_stat}</p>
+							<p>Defesa: {pokemon.stats[2].base_stat}</p>
+							<p>Ataque Especial: {pokemon.stats[3].base_stat}</p>
+							<p>Velocidade: {pokemon.stats[5].base_stat}</p>
 						</div>
-						<h3>Movimentos</h3>
-						<div className="moves">
-							<p>{pokemon.moves[0].move.name.toUpperCase()}</p>
-							<p>{pokemon.moves[1].move.name.toUpperCase()}</p>
-							<p>{pokemon.moves[2].move.name.toUpperCase()}</p>
-							<p>{pokemon.moves[3].move.name.toUpperCase()}</p>
+
+						<div className="data-details">
+							<h3>Habilidades</h3>
+							<div className="abilities">
+								{pokemon.abilities.map((ability, i) => {
+									return <p>{ability.ability.name.toUpperCase()}</p>;
+								})}
+							</div>
+							<h3>Movimentos</h3>
+							<div className="moves">
+								<p>{pokemon.moves[0].move.name.toUpperCase()}</p>
+								<p>{pokemon.moves[1].move.name.toUpperCase()}</p>
+								<p>{pokemon.moves[2].move.name.toUpperCase()}</p>
+								<p>{pokemon.moves[3].move.name.toUpperCase()}</p>
+							</div>
 						</div>
 					</div>
 				</div>

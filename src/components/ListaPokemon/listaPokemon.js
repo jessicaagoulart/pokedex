@@ -22,6 +22,7 @@ function ListaPokemon() {
 			setPrevUrl(response.previus);
 			await loadingPokemon(response.results);
 			setLoading(false);
+			console.log(response);
 		}
 		fetchData();
 	}, []);
@@ -91,8 +92,8 @@ function ListaPokemon() {
 								{pokemonData.map((pokemon, i) => {
 									const id = pokemon.id;
 									return (
-										<Link key={id} className="link-card" to={`/pokemon/${id}`}>
-											<Card pokemon={pokemon} />
+										<Link className="link-card" to={`/pokemon/${id}`}>
+											<Card key={id} pokemon={pokemon} />
 										</Link>
 									);
 								})}
