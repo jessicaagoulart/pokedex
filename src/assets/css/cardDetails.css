@@ -34,12 +34,21 @@
 	position: relative;
 }
 
-.img-details img {
+.details-pokemon {
 	width: 70%;
 	margin-top: -100px;
-	z-index: 999;
+	z-index: 9999;
+	position: relative;
 }
 
+.details-pokebola {
+	width: 500px;
+	z-index: 1;
+	position: absolute;
+	left: -10px;
+	top: -150px;
+	opacity: 40%;
+}
 .info-details {
 	width: 50%;
 	margin-top: 30px;
@@ -66,6 +75,7 @@
 .info-details .card-tags {
 	flex-direction: row;
 	align-items: center;
+	z-index: 999;
 }
 
 .info-details .card-tags .card-type {
@@ -88,6 +98,7 @@
 	font-size: 1rem;
 	margin-left: 20px;
 	margin-bottom: 5px;
+	z-index: 9999;
 }
 
 .details-voltar:hover {
@@ -139,18 +150,29 @@
 	flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1200px) {
+	.details-pokebola {
+		left: -90px;
+	}
+}
+
 /* Medium devices */
 @media screen and (max-width: 991px) {
 	.card-details-conteudo {
 		margin-top: -50px;
 	}
+	.details-pokebola {
+		left: -130px;
+		width: 440px;
+	}
 }
 
 /* Small devices */
 @media screen and (max-width: 767.98px) {
-	.img-details img {
+	.details-pokemon {
 		margin: 0;
 		width: 110%;
+		margin-bottom: -50px;
 	}
 	.card-details h1 {
 		margin: 0;
@@ -183,6 +205,11 @@
 	.info-details-up {
 		justify-content: center;
 	}
+	.details-pokebola {
+		left: -130px;
+		width: 440px;
+		top: -50px;
+	}
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -210,6 +237,7 @@
 	}
 	.id-details h2 {
 		font-size: 2rem;
+		z-index: 999;
 	}
 
 	.id-details {
@@ -234,6 +262,16 @@
 	.img-details {
 		margin: 3%;
 		width: 37%;
+	}
+
+	.details-pokebola {
+		width: 400px;
+		left: -120px;
+	}
+
+	.details-pokemon {
+		width: 130%;
+		margin-bottom: -50px;
 	}
 }
 /*-----------------------------------------------------------------------*/

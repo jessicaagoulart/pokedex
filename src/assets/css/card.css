@@ -45,15 +45,15 @@
 
 .card-img__pokebola {
 	position: relative;
-	width: 200px;
+	width: 250px;
 	opacity: 30%;
-	margin-bottom: -20px;
-	margin-right: 40px;
+	margin-bottom: -50px;
+	margin-left: -60px;
 }
 
 .card-img__pokemon {
 	position: absolute;
-	top: 30px;
+	top: 50px;
 	right: 0px;
 	width: 130%;
 }

@@ -3,6 +3,7 @@ import "../../assets/css/cardDetails.css";
 import color from "../Colors/index";
 import CardTag from "./CardTag";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import pokeball from "../../assets/img/pokeball.png";
 
 function CardDetails({ pokemon }) {
 	console.log(pokemon);
@@ -25,10 +26,15 @@ function CardDetails({ pokemon }) {
 					<div className="details-header">
 						<div className="img-details">
 							<img
+								className="details-pokemon"
 								src={pokemon.sprites.other["official-artwork"].front_default}
 								alt={pokemon.name}
 							></img>
-							<img></img>
+							<img
+								className="details-pokebola"
+								src={pokeball}
+								alt={"pokebola"}
+							></img>
 						</div>
 
 						<div className="info-details">
