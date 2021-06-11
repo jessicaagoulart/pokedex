@@ -1,24 +1,24 @@
 import React from "react";
-import "../../assets/css/card.css";
-import { useState, useEffect } from "react";
-import { getPokemon } from "../../api";
+import "../../assets/css/cardDetails.css";
+import color from "../Colors/index";
 
 function CardDetails({ pokemon }) {
-	const [cardDetails, setCardDetails] = useState({});
-	const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
+	// const [cardDetails, setCardDetails] = useState(cardDetails.types[type.name]);
+	// const url = `https://pokeapi.co/api/v2/pokemon/${pokemon.id}`;
 
-	useEffect(() => {
-		async function fetchData() {
-			let response = await getPokemon(url);
-			setCardDetails(response);
-		}
-		fetchData();
-	}, []);
+	console.log(pokemon);
+	// useEffect(() => {
+	// 	fetch(url)
+	// 		.then((response) => response.json())
+	// 		.then((data) => {
+	// 			setCardDetails(data);
+	// 			console.log(data);
+	// 		});
+	// }, []);
 
 	return (
-		<div>
-			{console.log({ cardDetails })}
-			<h1>oi</h1>
+		<div style={{ backgroundColor: color({ pokemon }) }}>
+			{pokemon.types[0].type.name}
 		</div>
 	);
 }

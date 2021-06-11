@@ -4,12 +4,12 @@
 	width: 100%;
 	justify-content: flex-end;
 	overflow: hidden;
-	background: rgb(3, 10, 36);
+	/* background: rgb(3, 10, 36);
 	background: linear-gradient(
 		11deg,
 		rgba(3, 10, 36, 1) 46%,
 		rgba(221, 45, 26, 1) 100%
-	);
+	); */
 }
 
 .navbar img {

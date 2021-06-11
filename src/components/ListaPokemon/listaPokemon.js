@@ -1,8 +1,9 @@
 import { getAllPokemon, getPokemon } from "../../api";
 import React, { useState, useEffect } from "react";
 import Card from "../Card/index";
-import { Link } from "react-router-dom";
+import Navbar from "../Navbar";
 import CardDetails from "../Card/CardDetails";
+import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "../../assets/css/listaPokemon.css";
 
@@ -90,7 +91,7 @@ function ListaPokemon() {
 									const id = pokemon.id;
 									return (
 										<Link className="link-card" to={`/pokemon/${id}`}>
-											<Card key={i} pokemon={pokemon} />
+											<Card key={id} pokemon={pokemon} />
 										</Link>
 									);
 								})}
@@ -111,13 +112,12 @@ function ListaPokemon() {
 			{pokemonData.map((pokemon, i) => {
 				const identifier = pokemon.id;
 				return (
-					<Route exact path={`/pokemon/${identifier}`}>
-						<CardDetails pokemon={identifier} />
+					<Route path={`/pokemon/:id`}>
+						<CardDetails key={identifier} pokemon={pokemon} />
 					</Route>
 				);
 			})}
 		</Router>
 	);
 }
-
 export default ListaPokemon;

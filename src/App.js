@@ -1,13 +1,14 @@
-import Navbar from "./components/Navbar/index";
 import ListaPokemon from "./components/ListaPokemon/index";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
 		<Router>
-			{" "}
 			<Navbar />
-			<ListaPokemon />
+			<Route>
+				<ListaPokemon exact path="/" />
+			</Route>
 		</Router>
 	);
 }

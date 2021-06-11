@@ -6,7 +6,11 @@ import pokeball from "../../assets/img/pokeball.png";
 
 function Card({ pokemon }) {
 	return (
-		<div style={{ backgroundColor: color({ pokemon }) }} className="card">
+		<div
+			key={pokemon.key}
+			style={{ backgroundColor: color({ pokemon }) }}
+			className="card"
+		>
 			<div className="card-info">
 				<div className="card-nome">
 					<h2>#{pokemon.id}</h2>
@@ -16,7 +20,7 @@ function Card({ pokemon }) {
 			</div>
 
 			<div className="card-img">
-				<img className="card-img__pokebola" src={pokeball} />
+				<img className="card-img__pokebola" src={pokeball} alt={"pokebola"} />
 				<img
 					className="card-img__pokemon"
 					src={pokemon.sprites.other["official-artwork"].front_default}

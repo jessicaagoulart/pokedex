@@ -3,16 +3,16 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	background: rgb(3, 10, 36);
+	background: white;
 }
 
 .page {
 	display: flex;
 	justify-content: center;
 	padding-bottom: 10px;
-	background: rgb(3, 10, 36);
+	background: white;
 }
 
 .page p {
-	color: white;
+	color: black;
 }
