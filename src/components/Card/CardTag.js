@@ -7,6 +7,7 @@ export default function CardTag({ pokemon }) {
 			{pokemon.types.map((type) => {
 				let color = "";
 				const typeTag = type.type.name;
+				// Desculpe por isso
 				if (typeTag === "bug") {
 					color = "#90c12c";
 				} else if (typeTag === "water") {

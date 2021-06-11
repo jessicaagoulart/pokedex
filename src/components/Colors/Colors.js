@@ -1,3 +1,5 @@
+// Desculpe por isso
+
 export default function color({ pokemon }) {
 	let color = "";
 	const type = pokemon.types[0].type.name;
