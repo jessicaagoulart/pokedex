@@ -1,10 +1,12 @@
 .btn button {
 	padding: 10px 20px;
 	border: none;
-	border-radius: 15px;
+	border-radius: 20px;
 	background-color: rgb(255, 204, 65);
 	transition: ease-in 0.3s;
 	cursor: pointer;
+	color: white;
+	font-size: 1rem;
 }
 
 .btn button:hover {
@@ -20,9 +22,19 @@
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	/* background: rgb(3, 10, 36); */
 }
 
 .link-card {
 	text-decoration: none;
+}
+
+.page {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+	background: white;
+}
+
+.page p {
+	color: black;
 }

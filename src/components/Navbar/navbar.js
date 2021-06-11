@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 export default function Navbar() {
 	return (
-		<Router>
+		<Router forceRefresh={true}>
 			<div className="navbar">
 				<img src={pokeball} alt={"pokebola"} />
 				<Link to="/">

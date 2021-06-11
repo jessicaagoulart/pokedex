@@ -5,14 +5,3 @@
 	justify-content: center;
 	background: white;
 }
-
-.page {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 10px;
-	background: white;
-}
-
-.page p {
-	color: black;
-}
