@@ -8,7 +8,7 @@ export default function Navbar() {
 		<Router>
 			<div className="navbar">
 				<img src={pokeball} alt={"pokebola"} />
-				<Link path={"/"}>
+				<Link to="/">
 					<h1>Pokedéx</h1>
 				</Link>
 			</div>

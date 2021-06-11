@@ -62,6 +62,7 @@ function ListaPokemon() {
 
 	return (
 		<Router>
+			<Navbar />
 			<Route exact path="/">
 				<div>
 					{" "}
@@ -90,8 +91,8 @@ function ListaPokemon() {
 								{pokemonData.map((pokemon, i) => {
 									const id = pokemon.id;
 									return (
-										<Link className="link-card" to={`/pokemon/${id}`}>
-											<Card key={id} pokemon={pokemon} />
+										<Link key={id} className="link-card" to={`/pokemon/${id}`}>
+											<Card pokemon={pokemon} />
 										</Link>
 									);
 								})}
@@ -112,7 +113,7 @@ function ListaPokemon() {
 			{pokemonData.map((pokemon, i) => {
 				const identifier = pokemon.id;
 				return (
-					<Route path={`/pokemon/:id`}>
+					<Route path={`/pokemon/${identifier}`}>
 						<CardDetails key={identifier} pokemon={pokemon} />
 					</Route>
 				);
