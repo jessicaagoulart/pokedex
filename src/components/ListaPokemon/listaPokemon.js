@@ -28,6 +28,9 @@ function ListaPokemon() {
 	}, []);
 
 	const next = async () => {
+		if (!nextUrl) {
+			return;
+		}
 		setLoading(true);
 		let data = await getAllPokemon(nextUrl);
 		await loadingPokemon(data.results);
