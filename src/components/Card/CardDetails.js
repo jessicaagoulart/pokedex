@@ -6,8 +6,6 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import pokeball from "../../assets/img/pokeball.png";
 
 function CardDetails({ pokemon }) {
-	console.log(pokemon);
-
 	return (
 		<Router forceRefresh={true}>
 			<div>
@@ -63,7 +61,7 @@ function CardDetails({ pokemon }) {
 							<h3>Habilidades</h3>
 							<div className="abilities">
 								{pokemon.abilities.map((ability, i) => {
-									return <p>{ability.ability.name.toUpperCase()}</p>;
+									return <p key={i}>{ability.ability.name.toUpperCase()}</p>;
 								})}
 							</div>
 							<h3>Movimentos</h3>

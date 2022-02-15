@@ -49,7 +49,7 @@ export default function CardTag({ pokemon }) {
 				}
 
 				return (
-					<div style={{ backgroundColor: color }} className="card-type">
+					<div key={type.type.name} style={{ backgroundColor: color }} className="card-type">
 						<p>{type.type.name.toUpperCase()}</p>
 					</div>
 				);
